@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>List Category</h1>
+<a th:href="@{/category/create}">Create</a>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr th:each="c,cStatus : ${category}" >
+        <td th:text="${cStatus.count}" id="a"></td>
+        <td th:text="${c.getName()}"></td>
+        <td></td>
+        <td><button>Update</button></td>
+        <td><button>Delete</button></td>
+    </tr>
+</table>
+</body>
+<script>
+</script>
+</html>
